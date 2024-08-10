@@ -1,0 +1,17 @@
+.user-questions-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.questions h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.questions h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.user-questions-container h1 {
+    font-size: 40px;
+}

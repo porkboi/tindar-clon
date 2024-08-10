@@ -1,0 +1,47 @@
+{
+  "name": "frontend-starterpack-calebashw",
+  "version": "2.0.0",
+  "description": "*description*",
+  "type": "module",
+  "main": "src/index.jsx",
+  "proxy":"http://localhost:5000/",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "sass": "^1.74.1",
+    "vite": "^5.2.8",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.3.7",
+    "@mui/material": "^5.15.20",
+    "@rpldy/upload-button": "^1.8.2",
+    "@rpldy/uploady": "^1.8.2",
+    "@vitejs/plugin-react": "^4.2.1",
+    "antd": "^5.18.1",
+    "axios": "^1.7.3",
+    "drive-uploady": "^0.3.0",
+    "immer": "^10.0.4",
+    "jquery": "^3.7.1",
+    "lodash.debounce": "^4.0.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.2.0",
+    "react-google-drive-picker": "^1.2.2",
+    "react-router": "^6.22.3",
+    "react-router-dom": "^6.22.3",
+    "react-swipeable": "^7.0.1",
+    "zustand": "^4.5.2"
+  }
+}

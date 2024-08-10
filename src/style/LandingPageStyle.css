@@ -1,0 +1,13 @@
+.landing-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.landing-page-header {
+    display: flex;
+    color: rgb(209, 86, 86);
+}
+.header {
+    font-size: 50px;
+}

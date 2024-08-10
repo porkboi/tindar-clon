@@ -1,0 +1,17 @@
+/* NavBar.css */
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+}
+body {
+  /* background: linear-gradient(to right, #ff6a6a, #ff9a3e); */
+  /* height: 100vh; */
+  margin: 0;
+  padding: 0;
+  /* width: 100%; */
+  align-items: center;
+  justify-content: center;
+}
+  

@@ -1,0 +1,129 @@
+Endorsements.css
+/* body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+} */
+/* 
+.endorsements-container {
+    padding: 20px;
+  } */
+  
+/* .endorsements-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+   */
+
+/* Endorsements.css */
+/* body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.endorsements-container {
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+
+.endorsements-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.endorsement-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.endorsement-item:last-child {
+  border-bottom: none;
+} */
+
+/* Endorsements.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.endorsements-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  min-height: calc(100vh - 50px); /* Adjust for the height of the bottom menu */
+  position: relative;
+}
+
+.endorsements-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.endorsement-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+.endorsement-item:last-child {
+  border-bottom: none;
+}
+
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  z-index: 2;
+}
+
+.avatar {
+  margin-right: 10px;
+}
+
+.list-item-meta-title {
+  font-weight: bold;
+}
+
+.list-item-meta-description {
+  color: gray;
+  font-weight: normal;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
