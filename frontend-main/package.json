@@ -4,7 +4,7 @@
   "description": "*description*",
   "type": "module",
   "main": "src/index.jsx",
-  "proxy":"http://localhost:5000/",
+  "proxy": "http://localhost:5000/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -33,6 +33,7 @@
     "antd": "^5.18.1",
     "axios": "^1.7.3",
     "drive-uploady": "^0.3.0",
+    "firebase": "^10.12.5",
     "immer": "^10.0.4",
     "jquery": "^3.7.1",
     "lodash.debounce": "^4.0.8",

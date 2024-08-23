@@ -9,6 +9,9 @@ from libraries import algLib
 from libraries import referralLib
 from libraries import endorsementLib
 import pandas as pd
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
 
 
 
@@ -28,14 +31,25 @@ def getDeck(userID):
 
     return deck
 
+def getProfilePic(userID):
+    cred = credentials.Certificate('../sixth-guru-430807-t5-8e2df9a6d7fc.json')
+    app = firebase_admin.initialize_app(cred)
+    db = firestore.client()
+
+    person_ref = db.collection().document(userID)
+    document = person_ref.get()
+    return document
+
+
 def getProfile(userID):
     res_df = getResumeDF(userID)
     applicant_df = getApplicantDF(userID)
     stats_df = getStatisticsDF(userID)
+    pic = getProfilePic(userID)
     profile = {
             'id': userID,
             'name': applicant_df['name'][0],
-            'image': 'https://via.placeholder.com/150',
+            'image': pic,
             'major' : res_df['major'][0],
             'minor' : res_df['minor'][0],
             'skills' : res_df['skills'][0],

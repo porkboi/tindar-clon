@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useHistory } from 'react-router-dom';
 import { Form, Input, Button } from 'antd';
 import '../style/RegisterStyle.css';
-import DriveUploady from 'drive-uploady';
-import UploadButton from '@rpldy/upload-button';
 
 function Register() {
   const [form] = Form.useForm();
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const history = useHistory();
 
   const handleSubmit = async (values) => {
     const { email, password, confirmPassword } = values;
@@ -17,6 +16,8 @@ function Register() {
       setError('Email must end with .26@dartmouth.edu');
       return;
     }
+
+    history.push({ pathname: '/user-questionnaire', state: email });
 
     if (password !== confirmPassword) {
       setError('Passwords do not match');
@@ -40,12 +41,6 @@ function Register() {
         layout="vertical"
         onFinish={handleSubmit}
       >
-        <DriveUploady
-          clientId="29431605486-o87giadlrotucirig2rt3c7gskj2cu04.apps.googleusercontent.com"
-          scope="https://www.googleapis.com/auth/drive.file"
-        >
-          <UploadButton>Click here to upload photo</UploadButton>
-        </DriveUploady>
         <Form.Item
           label="Dartmouth Email"
           name="email"

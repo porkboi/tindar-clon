@@ -1,28 +1,10 @@
 import React from 'react';
 import {
-  Select, InputNumber, Input, Upload, Button, message,
+  Select, InputNumber, Input, Button,
 } from 'antd';
-import { UploadOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
+import CustomUpload from '../components/CustomUpload';
 import '../style/UserQuestionsStyle.css';
-
-const uploadProps = {
-  name: 'file',
-  action: 'https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload',
-  headers: {
-    authorization: 'authorization-text',
-  },
-  onChange(info) {
-    if (info.file.status !== 'uploading') {
-      console.log(info.file, info.fileList);
-    }
-    if (info.file.status === 'done') {
-      message.success(`${info.file.name} file uploaded successfully`);
-    } else if (info.file.status === 'error') {
-      message.error(`${info.file.name} file upload failed.`);
-    }
-  },
-};
 
 function UserQuestions() {
   const navigate = useNavigate();
@@ -71,9 +53,7 @@ function UserQuestions() {
         <Input style={{ width: '20%' }} placeholder="dancing" /> <br />
         <Input style={{ width: '20%' }} placeholder="excel" /> <br />
         <h3>Please upload an image of yourself here</h3>
-        <Upload name={uploadProps.name} action={uploadProps.action} headers={uploadProps.headers} onChange={uploadProps.onChange}>
-          <Button style={{ marginBottom: 20 }} icon={<UploadOutlined />}>Click to Upload</Button>
-        </Upload>
+        <CustomUpload />
       </div>
       <Button style={{ marginBottom: 40 }} onClick={handleComplete} type="primary">Submit</Button>
     </div>

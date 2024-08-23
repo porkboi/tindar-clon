@@ -19,6 +19,7 @@ import libraries.endorsementLib as endorsementLib
 import libraries.cencorshipLib as cencorshipLib
 import libraries.resumeLib as resumeLib
 from random import randint
+from werkzeug.utils import secure_filename
 
 from flask import Flask, request
 from flask_cors import CORS
@@ -119,6 +120,18 @@ def main2():
     username = request.data
     print(str(username))
     return username
+
+@app.route('/upload', methods=['GET', 'POST'])
+def fileUpload():
+    target=os.path.join('..\img','test_docs')
+    if not os.path.isdir(target):
+        os.mkdir(target)
+    file = request.files['file'] 
+    filename = secure_filename(file.filename)
+    destination="/".join([target, filename])
+    file.save(destination)
+    response="Whatever you wish too return"
+    return response
 
 if __name__ == '__main__':
     app.run()
